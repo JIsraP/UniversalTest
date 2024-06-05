@@ -50,7 +50,9 @@ export const Practice1 = () => {
                 transform: 'translateX(-50%)',
                 display: 'flex',
                 flexDirection: 'row',
-                gap: 10,
+                gap: 5,
+                width: '100%',
+                justifyContent: 'center'
             }}>
                 <Link
                     component={RouterLink}
