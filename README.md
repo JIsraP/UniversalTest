@@ -7,3 +7,5 @@ ____________________________________
 5. yarn add @emotion/react @emotion/styled
 6. yarn add @mui/x-data-grid
 7. yarn add @mui/icons-material
+8. yarn add react-dnd 
+9. yarn add react-dnd-html5-backend

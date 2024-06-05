@@ -118,7 +118,7 @@ export const Practice1 = () => {
                 </Link>
             </Box>
 
-            <Grid container justifyContent="center" alignItems='center' height='65vh' width='100vw' sx={{
+            <Grid container justifyContent="center" alignItems='center' height={view === 'to-do' ? '75vh' : '65vh'} width='100vw' sx={{
                 marginTop: 20,
                 overflow: 'auto',
                 '&::-webkit-scrollbar': {
