@@ -14,6 +14,8 @@ export const Practice1 = () => {
         { name: 'Práctica 2', route: '/practice2' },
     ];
 
+    const images = ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg']
+
     const ToDoView = () => (
         <Grid item xs={12} align='center'>
             <ToDo />
@@ -34,7 +36,7 @@ export const Practice1 = () => {
 
     const CarouselView = () => (
         <Grid item xs={12} align='center'>
-            <Carousel />
+            <Carousel images={images} />
         </Grid>
     );
 
@@ -130,7 +132,7 @@ export const Practice1 = () => {
                     borderRadius: '10px',
                 },
             }}>
-                {view === 'to-do' ? <ToDoView /> : view === 'counter' ? <CounterView /> : view === 'temp-converter' ? <TempConverterView /> : view === 'carousel' ? <CarouselView/> : ''}
+                {view === 'to-do' ? <ToDoView /> : view === 'counter' ? <CounterView /> : view === 'temp-converter' ? <TempConverterView /> : view === 'carousel' ? <CarouselView /> : ''}
             </Grid>
         </Box>
     )
