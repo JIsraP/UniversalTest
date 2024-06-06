@@ -9,24 +9,28 @@ export const TempConverter = () => {
 
     const handleCelsiusChange = (event) => {
         const value = event.target.value;
-        setCelsius(value);
-        if (value === '') {
-            setFahrenheit('');
-            return;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setCelsius(value);
+            if (value === '') {
+                setFahrenheit('');
+            } else {
+                const fahrenheitValue = (parseFloat(value) * 9 / 5) + 32;
+                setFahrenheit(fahrenheitValue.toFixed(2));
+            }
         }
-        const fahrenheitValue = (parseFloat(value) * 9 / 5) + 32;
-        setFahrenheit(fahrenheitValue.toFixed(2));
     };
 
     const handleFahrenheitChange = (event) => {
         const value = event.target.value;
-        setFahrenheit(value);
-        if (value === '') {
-            setCelsius('');
-            return;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setFahrenheit(value);
+            if (value === '') {
+                setCelsius('');
+            } else {
+                const celsiusValue = (parseFloat(value) - 32) * 5 / 9;
+                setCelsius(celsiusValue.toFixed(2));
+            }
         }
-        const celsiusValue = (parseFloat(value) - 32) * 5 / 9;
-        setCelsius(celsiusValue.toFixed(2));
     };
 
     const handleSwap = () => {
@@ -53,7 +57,7 @@ export const TempConverter = () => {
                             </Grid>
                             <Grid item xs={2} style={{ textAlign: 'center' }}>
                                 <IconButton onClick={handleSwap}>
-                                    <SwapHorizIcon sx={{color: 'primary.main'}} />
+                                    <SwapHorizIcon sx={{ color: 'primary.main' }} />
                                 </IconButton>
                             </Grid>
                             <Grid item xs={5}>
@@ -79,7 +83,7 @@ export const TempConverter = () => {
                             </Grid>
                             <Grid item xs={2} style={{ textAlign: 'center' }}>
                                 <IconButton onClick={handleSwap}>
-                                    <SwapHorizIcon sx={{color: 'primary.main'}}/>
+                                    <SwapHorizIcon sx={{ color: 'primary.main' }} />
                                 </IconButton>
                             </Grid>
                             <Grid item xs={5}>
