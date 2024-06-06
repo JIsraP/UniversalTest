@@ -45,80 +45,78 @@ export const Practice1 = () => {
 
             <NavBar pages={pages} />
 
-            <Container maxWidth='sm'>
-                <Box sx={{
-                    position: 'fixed',
-                    top: '15vh',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    gap: 5,
-                    width: '100%',
-                    justifyContent: 'center'
-                }}>
-                    <Link
-                        component={RouterLink}
-                        underline="none"
-                        sx={{
+            <Box sx={{
+                position: 'fixed',
+                top: '15vh',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                display: 'flex',
+                flexDirection: 'row',
+                gap: 5,
+                width: '100%',
+                justifyContent: 'center'
+            }}>
+                <Link
+                    component={RouterLink}
+                    underline="none"
+                    sx={{
+                        color: view === 'to-do' ? 'secondary.main' : 'App.black',
+                        borderBottom: view === 'to-do' ? '2px solid' : 'none',
+                        textDecoration: 'none',
+                        '&:hover': {
                             color: view === 'to-do' ? 'secondary.main' : 'App.black',
-                            borderBottom: view === 'to-do' ? '2px solid' : 'none',
-                            textDecoration: 'none',
-                            '&:hover': {
-                                color: view === 'to-do' ? 'secondary.main' : 'App.black',
-                            },
-                        }}
-                        onClick={() => setView('to-do')}
-                    >
-                        To Do
-                    </Link>
-                    <Link
-                        component={RouterLink}
-                        underline="none"
-                        sx={{
+                        },
+                    }}
+                    onClick={() => setView('to-do')}
+                >
+                    To Do
+                </Link>
+                <Link
+                    component={RouterLink}
+                    underline="none"
+                    sx={{
+                        color: view === 'counter' ? 'secondary.main' : 'App.black',
+                        borderBottom: view === 'counter' ? '2px solid' : 'none',
+                        textDecoration: 'none',
+                        '&:hover': {
                             color: view === 'counter' ? 'secondary.main' : 'App.black',
-                            borderBottom: view === 'counter' ? '2px solid' : 'none',
-                            textDecoration: 'none',
-                            '&:hover': {
-                                color: view === 'counter' ? 'secondary.main' : 'App.black',
-                            },
-                        }}
-                        onClick={() => setView('counter')}
-                    >
-                        Counter
-                    </Link>
-                    <Link
-                        component={RouterLink}
-                        underline="none"
-                        sx={{
+                        },
+                    }}
+                    onClick={() => setView('counter')}
+                >
+                    Counter
+                </Link>
+                <Link
+                    component={RouterLink}
+                    underline="none"
+                    sx={{
+                        color: view === 'temp-converter' ? 'secondary.main' : 'App.black',
+                        borderBottom: view === 'temp-converter' ? '2px solid' : 'none',
+                        textDecoration: 'none',
+                        '&:hover': {
                             color: view === 'temp-converter' ? 'secondary.main' : 'App.black',
-                            borderBottom: view === 'temp-converter' ? '2px solid' : 'none',
-                            textDecoration: 'none',
-                            '&:hover': {
-                                color: view === 'temp-converter' ? 'secondary.main' : 'App.black',
-                            },
-                        }}
-                        onClick={() => setView('temp-converter')}
-                    >
-                        Temperature Converter
-                    </Link>
-                    <Link
-                        component={RouterLink}
-                        underline="none"
-                        sx={{
+                        },
+                    }}
+                    onClick={() => setView('temp-converter')}
+                >
+                    Temperature Converter
+                </Link>
+                <Link
+                    component={RouterLink}
+                    underline="none"
+                    sx={{
+                        color: view === 'carousel' ? 'secondary.main' : 'App.black',
+                        borderBottom: view === 'carousel' ? '2px solid' : 'none',
+                        textDecoration: 'none',
+                        '&:hover': {
                             color: view === 'carousel' ? 'secondary.main' : 'App.black',
-                            borderBottom: view === 'carousel' ? '2px solid' : 'none',
-                            textDecoration: 'none',
-                            '&:hover': {
-                                color: view === 'carousel' ? 'secondary.main' : 'App.black',
-                            },
-                        }}
-                        onClick={() => setView('carousel')}
-                    >
-                        Carousel
-                    </Link>
-                </Box>
-            </Container>
+                        },
+                    }}
+                    onClick={() => setView('carousel')}
+                >
+                    Carousel
+                </Link>
+            </Box>
 
             <Grid container justifyContent="center" alignItems='center' height={view === 'to-do' ? '75vh' : '65vh'} width='100vw' sx={{
                 marginTop: 20,
