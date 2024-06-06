@@ -59,14 +59,14 @@ export const NavBar = ({ pages }) => {
                             >
                                 {pages.map((page) =>
                                     <Button fullWidth component={Link} to={page.route} sx={{
-                                        color: 'App.white',
+                                        color: 'primary.main',
                                         textTransform: 'capitalize',
                                         fontSize: '15px',
-                                        borderRadius: '22px',
                                         height: '25px',
-                                        bgcolor: currentPage && currentPage.route === page.route ? 'App.btn_navbar_route' : 'transparent',
+                                        bgcolor: 'transparent',
                                         '&:hover': {
-                                            backgroundColor: currentPage && currentPage.route === page.route ? 'App.btn_navbar_route' : 'transparent'
+                                            backgroundColor: 'primary.light',
+                                            color: 'App.white'
                                         }
                                     }}>
                                         {page.name}
@@ -85,9 +85,10 @@ export const NavBar = ({ pages }) => {
                                             fontSize: '15px',
                                             borderRadius: '22px',
                                             height: '25px',
-                                            bgcolor: (currentPage && currentPage.route === page.route) ? 'App.btn_navbar_route' : 'transparent',
+                                            bgcolor: 'transparent',
                                             '&:hover': {
-                                                backgroundColor: currentPage && currentPage.route === page.route ? 'App.btn_navbar_route' : 'transparent'
+                                                backgroundColor: 'primary.light',
+                                                color: 'App.white'
                                             }
                                         }}>
                                             {page.name}
