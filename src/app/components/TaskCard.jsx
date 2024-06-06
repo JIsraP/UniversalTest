@@ -17,17 +17,17 @@ export const TaskCard = ({ task, index, column, moveTask, deleteTask }) => {
       ref={drag}
       sx={{
         padding: 2,
-        marginBottom: 2,
+        marginTop: 2,
         opacity: isDragging ? 0.5 : 1,
         cursor: 'move',
         boxShadow: 4
       }}
     >
-      <Typography variant="body1" gutterBottom> 
+      <Typography variant="body1" gutterBottom>
         {task.text}
       </Typography>
       <IconButton onClick={() => deleteTask(index, column)} size="small">
-        <DeleteIcon sx={{color: 'App.red'}} />
+        <DeleteIcon sx={{ color: 'App.red' }} />
       </IconButton>
     </Paper>
   );
