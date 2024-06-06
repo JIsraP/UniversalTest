@@ -9,7 +9,9 @@ export const Counter = () => {
     };
 
     const decrement = () => {
-        setCount(count - 1);
+        if(count > 0){
+            setCount(count - 1);
+        }
     };
 
     return (
