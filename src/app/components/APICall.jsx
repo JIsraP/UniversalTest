@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography, List, ListItem, ListItemText, ListItemIcon, Avatar, Grid, Box, Paper } from '@mui/material';
+import { Container, Typography, List, ListItem, ListItemText, ListItemIcon, Avatar, Grid, Box, ListItemButton } from '@mui/material';
 
 export const APICall = () => {
     // const [teams, setTeams] = useState([]);
@@ -488,12 +488,12 @@ export const APICall = () => {
                         </Typography>
                         <List component="ul">
                             {teams.map((team) => (
-                                <ListItem key={team.id} button onClick={() => handleTeamSelect(team)}>
+                                <ListItemButton key={team.id} onClick={() => handleTeamSelect(team)}>
                                     <ListItemIcon>
                                         <Avatar alt={team.name} src={team.logo} />
                                     </ListItemIcon>
                                     <ListItemText primary={team.name} />
-                                </ListItem>
+                                </ListItemButton>
                             ))}
                         </List>
                     </Box>
